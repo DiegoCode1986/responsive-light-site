@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Menu, X, Play, ChevronRight } from 'lucide-react';
+import { Menu, X, Play, ChevronRight, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Index = () => {
@@ -474,8 +474,45 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="border-t border-white/20 pt-8 text-center text-white/80">
-            <p>&copy; 2024 BJJ Tasmania. Todos os direitos reservados.</p>
+          {/* Social Media Section */}
+          <div className="border-t border-white/20 pt-8">
+            <div className="text-center mb-6">
+              <h3 className="text-xl font-bold mb-4">Siga-nos nas Redes Sociais</h3>
+              <div className="flex justify-center gap-6">
+                <a 
+                  href="#" 
+                  className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-6 h-6 text-white" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-6 h-6 text-white" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-6 h-6 text-white" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-6 h-6 text-white" />
+                </a>
+              </div>
+            </div>
+            
+            <div className="text-center text-white/80">
+              <p>&copy; 2024 BJJ Tasmania. Todos os direitos reservados.</p>
+            </div>
           </div>
         </div>
       </footer>
