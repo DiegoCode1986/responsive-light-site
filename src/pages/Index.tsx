@@ -62,23 +62,30 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-r from-gray-100 to-gray-200 py-20 lg:py-32">
-        <div className="container mx-auto px-4">
+      <section 
+        id="home" 
+        className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1544737151-6e4b9c2c2e5e?w=1920&h=1080&fit=crop')"
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-800 mb-6">
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 BRAZILIAN<br />
                 JIU JITSU<br />
                 <span className="text-yellow-500">TASMANIA</span>
               </h1>
-              <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto lg:mx-0">
+              <p className="text-lg text-gray-200 mb-8 max-w-md mx-auto lg:mx-0">
                 Learn the art of Brazilian Jiu Jitsu with experienced instructors in a welcoming environment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
                   JOIN NOW <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button variant="outline" className="border-gray-400 text-gray-700 hover:bg-gray-100 px-8 py-3 text-lg">
+                <Button variant="outline" className="border-gray-200 text-white hover:bg-white/10 px-8 py-3 text-lg">
                   CLASS TIMETABLE
                 </Button>
               </div>
