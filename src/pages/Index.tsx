@@ -18,7 +18,7 @@ const Index = () => {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-lg">BJJ</span>
               </div>
               <span className="text-xl font-bold text-gray-800">BJJ TASMANIA</span>
@@ -26,18 +26,18 @@ const Index = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-red-600 transition-colors">HOME</a>
-              <a href="#about" className="text-gray-700 hover:text-red-600 transition-colors">ABOUT</a>
-              <a href="#classes" className="text-gray-700 hover:text-red-600 transition-colors">CLASSES</a>
-              <a href="#instructors" className="text-gray-700 hover:text-red-600 transition-colors">INSTRUCTORS</a>
-              <a href="#membership" className="text-gray-700 hover:text-red-600 transition-colors">MEMBERSHIP</a>
-              <a href="#news" className="text-gray-700 hover:text-red-600 transition-colors">NEWS</a>
-              <a href="#contact" className="text-gray-700 hover:text-red-600 transition-colors">CONTACT</a>
+              <a href="#home" className="text-gray-700 hover:text-yellow-500 transition-colors">HOME</a>
+              <a href="#about" className="text-gray-700 hover:text-yellow-500 transition-colors">ABOUT</a>
+              <a href="#classes" className="text-gray-700 hover:text-yellow-500 transition-colors">CLASSES</a>
+              <a href="#instructors" className="text-gray-700 hover:text-yellow-500 transition-colors">INSTRUCTORS</a>
+              <a href="#membership" className="text-gray-700 hover:text-yellow-500 transition-colors">MEMBERSHIP</a>
+              <a href="#news" className="text-gray-700 hover:text-yellow-500 transition-colors">NEWS</a>
+              <a href="#contact" className="text-gray-700 hover:text-yellow-500 transition-colors">CONTACT</a>
             </div>
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden p-2 text-gray-700 hover:text-red-600 transition-colors"
+              className="lg:hidden p-2 text-gray-700 hover:text-yellow-500 transition-colors"
               onClick={toggleMenu}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -48,13 +48,13 @@ const Index = () => {
           {isMenuOpen && (
             <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t">
               <div className="px-4 py-2 space-y-1">
-                <a href="#home" className="block py-3 text-gray-700 hover:text-red-600 border-b border-gray-100">HOME</a>
-                <a href="#about" className="block py-3 text-gray-700 hover:text-red-600 border-b border-gray-100">ABOUT</a>
-                <a href="#classes" className="block py-3 text-gray-700 hover:text-red-600 border-b border-gray-100">CLASSES</a>
-                <a href="#instructors" className="block py-3 text-gray-700 hover:text-red-600 border-b border-gray-100">INSTRUCTORS</a>
-                <a href="#membership" className="block py-3 text-gray-700 hover:text-red-600 border-b border-gray-100">MEMBERSHIP</a>
-                <a href="#news" className="block py-3 text-gray-700 hover:text-red-600 border-b border-gray-100">NEWS</a>
-                <a href="#contact" className="block py-3 text-gray-700 hover:text-red-600">CONTACT</a>
+                <a href="#home" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">HOME</a>
+                <a href="#about" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">ABOUT</a>
+                <a href="#classes" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">CLASSES</a>
+                <a href="#instructors" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">INSTRUCTORS</a>
+                <a href="#membership" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">MEMBERSHIP</a>
+                <a href="#news" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">NEWS</a>
+                <a href="#contact" className="block py-3 text-gray-700 hover:text-yellow-500">CONTACT</a>
               </div>
             </div>
           )}
@@ -69,13 +69,13 @@ const Index = () => {
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-800 mb-6">
                 BRAZILIAN<br />
                 JIU JITSU<br />
-                <span className="text-red-600">TASMANIA</span>
+                <span className="text-yellow-500">TASMANIA</span>
               </h1>
               <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto lg:mx-0">
                 Learn the art of Brazilian Jiu Jitsu with experienced instructors in a welcoming environment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg">
+                <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
                   JOIN NOW <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button variant="outline" className="border-gray-400 text-gray-700 hover:bg-gray-100 px-8 py-3 text-lg">
@@ -92,9 +92,9 @@ const Index = () => {
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-red-600 rounded-full flex items-center justify-center">
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-yellow-500 rounded-full flex items-center justify-center">
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                    <span className="text-red-600 font-bold text-sm">BJJ</span>
+                    <span className="text-yellow-500 font-bold text-sm">BJJ</span>
                   </div>
                 </div>
               </div>
@@ -108,16 +108,16 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
-              <div className="w-32 h-32 bg-red-600 rounded-full flex items-center justify-center">
+              <div className="w-32 h-32 bg-yellow-500 rounded-full flex items-center justify-center">
                 <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-red-600 font-bold text-2xl">BJJ</span>
+                  <span className="text-yellow-500 font-bold text-2xl">BJJ</span>
                 </div>
               </div>
             </div>
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
                 WELCOME TO<br />
-                <span className="text-red-600">BJJ TASMANIA</span>
+                <span className="text-yellow-500">BJJ TASMANIA</span>
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Brazilian Jiu Jitsu has been described as "the best martial art for self defense and self-discipline." 
@@ -128,7 +128,7 @@ const Index = () => {
                 sharing their knowledge. Whether you're a beginner or advanced practitioner, we welcome everyone 
                 to join our supportive community and international brotherhood in BJJ and martial arts Brazilian Jiu Jitsu Tasmania.
               </p>
-              <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3">
+              <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3">
                 READ MORE
               </Button>
             </div>
@@ -153,7 +153,7 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white">
+                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
                     VIEW MORE
                   </Button>
                 </div>
@@ -175,7 +175,7 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white">
+                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
                     VIEW MORE
                   </Button>
                 </div>
@@ -197,7 +197,7 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white">
+                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
                     VIEW MORE
                   </Button>
                 </div>
@@ -219,7 +219,7 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white">
+                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
                     VIEW MORE
                   </Button>
                 </div>
@@ -241,7 +241,7 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white">
+                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
                     VIEW MORE
                   </Button>
                 </div>
@@ -263,7 +263,7 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white">
+                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
                     VIEW MORE
                   </Button>
                 </div>
@@ -285,7 +285,7 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               BJJ CLUB<br />
-              <span className="text-red-500">RANKINGS</span>
+              <span className="text-yellow-500">RANKINGS</span>
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
               Learn about our grading system, which denotes proficiency and skill level, and gives insight into 
@@ -295,7 +295,7 @@ const Index = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg">
+            <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
               OUR CLUB NEWS
             </Button>
             <Button variant="outline" className="border-gray-400 text-white hover:bg-gray-700 px-8 py-3 text-lg">
@@ -318,7 +318,7 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white rounded-full w-16 h-16">
+                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full w-16 h-16">
                     <Play className="w-6 h-6" />
                   </Button>
                 </div>
@@ -385,7 +385,7 @@ const Index = () => {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4">
               SUBSCRIBE TO<br />
-              <span className="text-red-500">OUR NEWSLETTER</span>
+              <span className="text-yellow-500">OUR NEWSLETTER</span>
             </h2>
           </div>
           
@@ -394,9 +394,9 @@ const Index = () => {
               <input 
                 type="email" 
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-red-500"
+                className="flex-1 px-4 py-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-yellow-500"
               />
-              <Button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3">
+              <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3">
                 SUBSCRIBE
               </Button>
             </div>
@@ -409,7 +409,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-red-500">CONTACT INFO</h3>
+              <h3 className="text-lg font-semibold mb-4 text-yellow-500">CONTACT INFO</h3>
               <div className="space-y-2 text-gray-300">
                 <p>BJJ Tasmania Launceston Academy</p>
                 <p>Tasmania, Australia - Email: bigjujitsu.com</p>
@@ -420,7 +420,7 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-red-500">CLASSES</h3>
+              <h3 className="text-lg font-semibold mb-4 text-yellow-500">CLASSES</h3>
               <div className="space-y-2 text-gray-300">
                 <p>BJJ Tasmania Launceston Academy</p>
                 <p>Q6 Building, Elwick Street</p>
@@ -429,25 +429,25 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-red-500">QUICK LINKS</h3>
+              <h3 className="text-lg font-semibold mb-4 text-yellow-500">QUICK LINKS</h3>
               <div className="space-y-2 text-gray-300">
-                <p><a href="#home" className="hover:text-red-500 transition-colors">Home</a></p>
-                <p><a href="#about" className="hover:text-red-500 transition-colors">About</a></p>
-                <p><a href="#classes" className="hover:text-red-500 transition-colors">Classes</a></p>
-                <p><a href="#contact" className="hover:text-red-500 transition-colors">Contact</a></p>
+                <p><a href="#home" className="hover:text-yellow-500 transition-colors">Home</a></p>
+                <p><a href="#about" className="hover:text-yellow-500 transition-colors">About</a></p>
+                <p><a href="#classes" className="hover:text-yellow-500 transition-colors">Classes</a></p>
+                <p><a href="#contact" className="hover:text-yellow-500 transition-colors">Contact</a></p>
               </div>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-red-500">FOLLOW US</h3>
+              <h3 className="text-lg font-semibold mb-4 text-yellow-500">FOLLOW US</h3>
               <div className="flex space-x-4">
-                <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm">f</span>
                 </div>
-                <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm">t</span>
                 </div>
-                <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm">i</span>
                 </div>
               </div>
