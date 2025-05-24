@@ -412,57 +412,70 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="py-16 bg-gray-900 text-white">
+      <footer className="py-16 bg-teal-500 text-white">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-yellow-500">CONTACT INFO</h3>
-              <div className="space-y-2 text-gray-300">
-                <p>BJJ Tasmania Launceston Academy</p>
-                <p>Tasmania, Australia - Email: bigjujitsu.com</p>
-                <p>bigjujitsu.com</p>
-                <p>Tasmania, Post-Hobart</p>
-                <p>Tasmania, From Hobart</p>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-yellow-500">CLASSES</h3>
-              <div className="space-y-2 text-gray-300">
-                <p>BJJ Tasmania Launceston Academy</p>
-                <p>Q6 Building, Elwick Street</p>
-                <p>Inglewhite, IA SUPP</p>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-yellow-500">QUICK LINKS</h3>
-              <div className="space-y-2 text-gray-300">
-                <p><a href="#home" className="hover:text-yellow-500 transition-colors">Home</a></p>
-                <p><a href="#about" className="hover:text-yellow-500 transition-colors">About</a></p>
-                <p><a href="#classes" className="hover:text-yellow-500 transition-colors">Classes</a></p>
-                <p><a href="#contact" className="hover:text-yellow-500 transition-colors">Contact</a></p>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-4 text-yellow-500">FOLLOW US</h3>
-              <div className="flex space-x-4">
-                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm">f</span>
-                </div>
-                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm">t</span>
-                </div>
-                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm">i</span>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              18 ANOS DE TRADIÇÃO!
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* Sobre a Academia */}
+            <div className="text-center md:text-left">
+              <div className="flex justify-center md:justify-start mb-4">
+                <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
                 </div>
               </div>
+              <h3 className="text-xl font-bold mb-3">Sobre a Academia</h3>
+              <p className="text-white/90 text-sm leading-relaxed">
+                Academia BJJ Tasmania - Empresa voltada para a arte de fazer você evoluir, fundada em 2006, 
+                foi instalada em Tasmania com objetivo de ser uma academia voltada para a 
+                satisfação de seu usuário, tendo como foco principal você praticante.
+              </p>
+            </div>
+
+            {/* Tratamentos Especializados */}
+            <div className="text-center md:text-left">
+              <div className="flex justify-center md:justify-start mb-4">
+                <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Treinamentos Especializados</h3>
+              <p className="text-white/90 text-sm leading-relaxed">
+                Todos os nossos treinamentos e serviços são realizados em consultórios 
+                altamente confortáveis, projetados de acordo com os melhores padrões de 
+                qualidade.
+              </p>
+            </div>
+
+            {/* Atendimento de Qualidade */}
+            <div className="text-center md:text-left">
+              <div className="flex justify-center md:justify-start mb-4">
+                <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Atendimento de Qualidade</h3>
+              <p className="text-white/90 text-sm leading-relaxed">
+                "Para nós, Academia BJJ Tasmania, a sua satisfação é de suma importância para o 
+                nosso desenvolvimento, criando uma rede de confiança e sustentabilidade." - 
+                Forte abraço!!!
+              </p>
             </div>
           </div>
           
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 BJJ Tasmania. All rights reserved.</p>
+          <div className="border-t border-white/20 pt-8 text-center text-white/80">
+            <p>&copy; 2024 BJJ Tasmania. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
