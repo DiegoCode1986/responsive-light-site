@@ -1,13 +1,52 @@
 
+
 import { useState } from 'react';
 import { Menu, X, Play, ChevronRight, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [expandedClass, setExpandedClass] = useState<string | null>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleClassInfo = (className: string) => {
+    setExpandedClass(expandedClass === className ? null : className);
+  };
+
+  const classDetails = {
+    'adults-bjj': {
+      schedule: 'Segunda, Quarta e Sexta - 19:00 às 20:30',
+      age: 'A partir de 16 anos',
+      description: 'Aprenda o Brazilian Jiu-Jitsu completo incluindo defesa pessoal eficaz, luta no solo, quedas e muito mais. Classes focadas em técnica, condicionamento físico e desenvolvimento pessoal.'
+    },
+    'juniors-10-16': {
+      schedule: 'Terça e Quinta - 17:00 às 18:00',
+      age: '10 a 16 anos',
+      description: 'Esta classe tem como objetivo incutir confiança, fitness e defesa pessoal, desenvolvendo forte disciplina e respeito. Foco em fundamentos e desenvolvimento do caráter.'
+    },
+    'juniors-6-10': {
+      schedule: 'Terça e Quinta - 16:00 às 17:00',
+      age: '6 a 10 anos',
+      description: 'Esta classe consiste em jogos divertidos que ajudam a construir força central e aprender um esporte que podem continuar para a vida. Ambiente lúdico e educativo.'
+    },
+    'ladies-bjj': {
+      schedule: 'Sábado - 10:00 às 11:30',
+      age: 'A partir de 16 anos',
+      description: 'Para mulheres que querem entrar no BJJ por diversão, fitness ou autodefesa, esta classe irá introduzir as mulheres aos fundamentos básicos em um ambiente acolhedor e encorajador.'
+    },
+    'no-gi': {
+      schedule: 'Domingo - 15:00 às 16:30',
+      age: 'A partir de 14 anos',
+      description: 'No-Gi BJJ é ótimo e pode ser considerado como uma combinação de submission wrestling e técnicas de BJJ. Foco em agilidade, velocidade e transições dinâmicas.'
+    },
+    'open-mat': {
+      schedule: 'Sábado - 14:00 às 16:00',
+      age: 'Apenas para alunos ativos',
+      description: 'Sessões de treino livre disponíveis apenas para estudantes que estão treinando ativamente e precisam de tempo extra para praticar. Sparring supervisionado e desenvolvimento técnico.'
+    }
   };
 
   return (
@@ -159,17 +198,23 @@ const Index = () => {
                   alt="Adult BJJ"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
-                    VIEW MORE
-                  </Button>
-                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">ADULTS BJJ</h3>
-                <p className="text-gray-600 text-sm">
-                  Learn complete Brazilian Jiu-Jitsu including effective self-defense, ground fighting, takedowns and much more.
-                </p>
+                <Button 
+                  size="sm" 
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
+                  onClick={() => toggleClassInfo('adults-bjj')}
+                >
+                  VIEW MORE
+                </Button>
+                {expandedClass === 'adults-bjj' && (
+                  <div className="mt-4 space-y-2 text-sm text-gray-600">
+                    <p><strong>Horários:</strong> {classDetails['adults-bjj'].schedule}</p>
+                    <p><strong>Idade:</strong> {classDetails['adults-bjj'].age}</p>
+                    <p className="mt-2">{classDetails['adults-bjj'].description}</p>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -181,17 +226,23 @@ const Index = () => {
                   alt="Juniors BJJ"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
-                    VIEW MORE
-                  </Button>
-                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">JUNIORS 10-16 YRS BJJ</h3>
-                <p className="text-gray-600 text-sm">
-                  This class is aimed to instill confidence, fitness and self defense while developing strong discipline and respect.
-                </p>
+                <Button 
+                  size="sm" 
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
+                  onClick={() => toggleClassInfo('juniors-10-16')}
+                >
+                  VIEW MORE
+                </Button>
+                {expandedClass === 'juniors-10-16' && (
+                  <div className="mt-4 space-y-2 text-sm text-gray-600">
+                    <p><strong>Horários:</strong> {classDetails['juniors-10-16'].schedule}</p>
+                    <p><strong>Idade:</strong> {classDetails['juniors-10-16'].age}</p>
+                    <p className="mt-2">{classDetails['juniors-10-16'].description}</p>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -203,17 +254,23 @@ const Index = () => {
                   alt="Kids BJJ"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
-                    VIEW MORE
-                  </Button>
-                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">JUNIORS 6-10 YRS BJJ</h3>
-                <p className="text-gray-600 text-sm">
-                  This class consists of fun base games which help build core strength and learning a sport they can continue for life.
-                </p>
+                <Button 
+                  size="sm" 
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
+                  onClick={() => toggleClassInfo('juniors-6-10')}
+                >
+                  VIEW MORE
+                </Button>
+                {expandedClass === 'juniors-6-10' && (
+                  <div className="mt-4 space-y-2 text-sm text-gray-600">
+                    <p><strong>Horários:</strong> {classDetails['juniors-6-10'].schedule}</p>
+                    <p><strong>Idade:</strong> {classDetails['juniors-6-10'].age}</p>
+                    <p className="mt-2">{classDetails['juniors-6-10'].description}</p>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -225,17 +282,23 @@ const Index = () => {
                   alt="Ladies BJJ"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
-                    VIEW MORE
-                  </Button>
-                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">LADIES BJJ</h3>
-                <p className="text-gray-600 text-sm">
-                  For ladies wanting to get into BJJ for fun, fitness or self-defense, this class will introduce women to the basics.
-                </p>
+                <Button 
+                  size="sm" 
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
+                  onClick={() => toggleClassInfo('ladies-bjj')}
+                >
+                  VIEW MORE
+                </Button>
+                {expandedClass === 'ladies-bjj' && (
+                  <div className="mt-4 space-y-2 text-sm text-gray-600">
+                    <p><strong>Horários:</strong> {classDetails['ladies-bjj'].schedule}</p>
+                    <p><strong>Idade:</strong> {classDetails['ladies-bjj'].age}</p>
+                    <p className="mt-2">{classDetails['ladies-bjj'].description}</p>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -247,17 +310,23 @@ const Index = () => {
                   alt="No-Gi Grappling"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
-                    VIEW MORE
-                  </Button>
-                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">NO-GI GRAPPLING BJJ</h3>
-                <p className="text-gray-600 text-sm">
-                  No-Gi BJJ is great and can be regarded as a combination of submission wrestling and BJJ techniques.
-                </p>
+                <Button 
+                  size="sm" 
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
+                  onClick={() => toggleClassInfo('no-gi')}
+                >
+                  VIEW MORE
+                </Button>
+                {expandedClass === 'no-gi' && (
+                  <div className="mt-4 space-y-2 text-sm text-gray-600">
+                    <p><strong>Horários:</strong> {classDetails['no-gi'].schedule}</p>
+                    <p><strong>Idade:</strong> {classDetails['no-gi'].age}</p>
+                    <p className="mt-2">{classDetails['no-gi'].description}</p>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -269,17 +338,23 @@ const Index = () => {
                   alt="Open Mat"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-4 left-4">
-                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
-                    VIEW MORE
-                  </Button>
-                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">OPEN MAT BJJ</h3>
-                <p className="text-gray-600 text-sm">
-                  Open mat sessions are available only for students who are actively training and rolling and need extra time to practice.
-                </p>
+                <Button 
+                  size="sm" 
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
+                  onClick={() => toggleClassInfo('open-mat')}
+                >
+                  VIEW MORE
+                </Button>
+                {expandedClass === 'open-mat' && (
+                  <div className="mt-4 space-y-2 text-sm text-gray-600">
+                    <p><strong>Horários:</strong> {classDetails['open-mat'].schedule}</p>
+                    <p><strong>Idade:</strong> {classDetails['open-mat'].age}</p>
+                    <p className="mt-2">{classDetails['open-mat'].description}</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -521,3 +596,4 @@ const Index = () => {
 };
 
 export default Index;
+
