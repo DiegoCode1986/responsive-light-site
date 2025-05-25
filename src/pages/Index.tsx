@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { Menu, X, Play, ChevronRight, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,6 +53,29 @@ const Index = () => {
       description: 'Sessões de treino livre disponíveis apenas para estudantes que estão treinando ativamente e precisam de tempo extra para praticar. Sparring supervisionado e desenvolvimento técnico.'
     }
   };
+
+  const academyImages = [
+    {
+      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+      alt: "BJJ Training Session"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&h=600&fit=crop",
+      alt: "Academy Interior"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1544737151-6e4b9c2c2e5e?w=800&h=600&fit=crop",
+      alt: "BJJ Techniques"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+      alt: "Students Training"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&h=600&fit=crop",
+      alt: "Competition Training"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -371,7 +401,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Membership Section */}
+      {/* Membership Section with Carousel */}
       <section id="membership" className="py-20 bg-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -379,11 +409,42 @@ const Index = () => {
               BJJ CLUB<br />
               <span className="text-yellow-500">RANKINGS</span>
             </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
+            <p className="text-gray-300 max-w-2xl mx-auto mb-8">
               Learn about our grading system, which denotes proficiency and skill level, and gives insight into 
               an opponent's skill level in BJJ and we will break down exactly how our 
               ranking system and training works.
             </p>
+          </div>
+
+          {/* Academy Photos Carousel */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-center mb-8 text-yellow-500">FOTOS DA ACADEMIA</h3>
+            <div className="max-w-4xl mx-auto">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {academyImages.map((image, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-2">
+                        <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <div className="absolute bottom-4 left-4 text-white">
+                              <p className="text-sm font-medium">{image.alt}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </Carousel>
+            </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
