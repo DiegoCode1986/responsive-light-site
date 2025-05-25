@@ -57,8 +57,12 @@ const Index = () => {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">BJJ</span>
+              <div className="w-12 h-12 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/fd5b643e-1cca-432b-8a3b-cd08692058fa.png" 
+                  alt="BJJ Tasmania Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-xl font-bold text-gray-800">BJJ TASMANIA</span>
             </div>
@@ -140,7 +144,11 @@ const Index = () => {
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-yellow-500 rounded-full flex items-center justify-center">
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                    <span className="text-yellow-500 font-bold text-sm">BJJ</span>
+                    <img 
+                      src="/lovable-uploads/fd5b643e-1cca-432b-8a3b-cd08692058fa.png" 
+                      alt="BJJ Tasmania Logo"
+                      className="w-10 h-10 object-contain"
+                    />
                   </div>
                 </div>
               </div>
@@ -156,7 +164,11 @@ const Index = () => {
             <div className="flex justify-center">
               <div className="w-32 h-32 bg-yellow-500 rounded-full flex items-center justify-center">
                 <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-yellow-500 font-bold text-2xl">BJJ</span>
+                  <img 
+                    src="/lovable-uploads/fd5b643e-1cca-432b-8a3b-cd08692058fa.png" 
+                    alt="BJJ Tasmania Logo"
+                    className="w-16 h-16 object-contain"
+                  />
                 </div>
               </div>
             </div>
@@ -596,4 +608,3 @@ const Index = () => {
 };
 
 export default Index;
-
