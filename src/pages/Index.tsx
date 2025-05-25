@@ -1,5 +1,3 @@
-
-
 import { useState } from 'react';
 import { Menu, X, Play, ChevronRight, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -109,7 +107,7 @@ const Index = () => {
         id="home" 
         className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1544737151-6e4b9c2c2e5e?w=1920&h=1080&fit=crop')"
+          backgroundImage: "url('/lovable-uploads/1e8516c1-f9f2-4e1f-844c-24fb53dad867.png')"
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
