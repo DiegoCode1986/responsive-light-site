@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X, Play, ChevronRight, Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -554,97 +553,6 @@ const Index = () => {
               <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3">
                 SUBSCRIBE
               </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-              LOCALIZAÇÃO E <span className="text-yellow-500">CONTATO</span>
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Venha nos visitar e conheça nossa academia. Estamos prontos para recebê-lo!
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">Informações de Contato</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-800">Endereço</h4>
-                      <p className="text-gray-600">Jardim Ingá<br />Academia Esporte & Vida</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-800">Telefone</h4>
-                      <p className="text-gray-600">(61) 99999-9999</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-800">Email</h4>
-                      <p className="text-gray-600">contato@bjjtasmania.com</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-800">Horário de Funcionamento</h4>
-                      <div className="text-gray-600 text-sm">
-                        <p>Segunda a Sexta: 17:00 - 21:00</p>
-                        <p>Sábado: 10:00 - 16:00</p>
-                        <p>Domingo: 15:00 - 17:00</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 w-full sm:w-auto">
-                  AGENDAR AULA EXPERIMENTAL
-                </Button>
-              </div>
-            </div>
-
-            {/* Map */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Localização</h3>
-              <LocationMap />
-              <div className="mt-4 text-center">
-                <a 
-                  href="https://www.google.com/maps/search/academia+esporte+vide+jardim+inga/@-16.1482418,-47.9472321,18z?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-yellow-500 hover:text-yellow-600 font-medium text-sm"
-                >
-                  Ver no Google Maps →
-                </a>
-              </div>
             </div>
           </div>
         </div>
