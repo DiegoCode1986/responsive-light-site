@@ -153,12 +153,9 @@ const Index = () => {
               <p className="text-lg text-gray-200 mb-8 max-w-md mx-auto lg:mx-0">
                 Learn the art of Brazilian Jiu Jitsu with experienced instructors in a welcoming environment.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex justify-center lg:justify-start">
                 <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
                   JOIN NOW <ChevronRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button variant="outline" className="border-gray-200 text-white hover:bg-white/10 px-8 py-3 text-lg">
-                  CLASS TIMETABLE
                 </Button>
               </div>
             </div>
@@ -169,7 +166,7 @@ const Index = () => {
                     <img 
                       src="/lovable-uploads/fd5b643e-1cca-432b-8a3b-cd08692058fa.png" 
                       alt="BJJ Tasmania Logo"
-                      className="w-32 h-32 lg:w-40 lg:h-40 object-contain"
+                      className="w-40 h-40 lg:w-56 lg:h-56 object-contain"
                     />
                   </div>
                 </div>
