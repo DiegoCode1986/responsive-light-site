@@ -161,14 +161,12 @@ const Index = () => {
             </div>
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-64 h-64 lg:w-80 lg:h-80 bg-yellow-500 rounded-full flex items-center justify-center">
-                  <div className="w-48 h-48 lg:w-64 lg:h-64 bg-white rounded-full flex items-center justify-center">
-                    <img 
-                      src="/lovable-uploads/fd5b643e-1cca-432b-8a3b-cd08692058fa.png" 
-                      alt="BJJ Tasmania Logo"
-                      className="w-40 h-40 lg:w-56 lg:h-56 object-contain"
-                    />
-                  </div>
+                <div className="w-64 h-64 lg:w-80 lg:h-80 border-4 border-yellow-500 rounded-full flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/fd5b643e-1cca-432b-8a3b-cd08692058fa.png" 
+                    alt="BJJ Tasmania Logo"
+                    className="w-40 h-40 lg:w-56 lg:h-56 object-contain"
+                  />
                 </div>
               </div>
             </div>
