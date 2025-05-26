@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Menu, X, Play, ChevronRight, Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -712,43 +713,103 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Social Media Section */}
+          {/* Social Media and Contact Section */}
           <div className="border-t border-white/20 pt-8">
-            <div className="text-center mb-6">
-              <h3 className="text-xl font-bold mb-4">Siga-nos nas Redes Sociais</h3>
-              <div className="flex justify-center gap-6">
-                <a 
-                  href="#" 
-                  className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-6 h-6 text-white" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="w-6 h-6 text-white" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
-                  aria-label="YouTube"
-                >
-                  <Youtube className="w-6 h-6 text-white" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-6 h-6 text-white" />
-                </a>
+            <div className="grid md:grid-cols-2 gap-8 mb-6">
+              {/* Social Media */}
+              <div className="text-center md:text-left">
+                <h3 className="text-xl font-bold mb-4">Siga-nos nas Redes Sociais</h3>
+                <div className="flex justify-center md:justify-start gap-6">
+                  <a 
+                    href="#" 
+                    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-6 h-6 text-white" />
+                  </a>
+                  <a 
+                    href="#" 
+                    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-6 h-6 text-white" />
+                  </a>
+                  <a 
+                    href="#" 
+                    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
+                    aria-label="YouTube"
+                  >
+                    <Youtube className="w-6 h-6 text-white" />
+                  </a>
+                  <a 
+                    href="#" 
+                    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-6 h-6 text-white" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Contact Information */}
+              <div className="text-center md:text-left">
+                <h3 className="text-xl font-bold mb-4">Localização e Contato</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-center md:justify-start gap-3">
+                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-white/90 text-sm">Jardim Ingá - Academia Esporte & Vida</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center md:justify-start gap-3">
+                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-white/90 text-sm">(61) 99999-9999</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center md:justify-start gap-3">
+                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-white/90 text-sm">contato@bjjtasmania.com</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start justify-center md:justify-start gap-3">
+                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <div className="text-white/90 text-sm">
+                        <p>Seg-Sex: 17:00-21:00</p>
+                        <p>Sáb: 10:00-16:00</p>
+                        <p>Dom: 15:00-17:00</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-4">
+                    <a 
+                      href="https://www.google.com/maps/search/academia+esporte+vide+jardim+inga/@-16.1482418,-47.9472321,18z?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-yellow-500 hover:text-yellow-400 font-medium text-sm underline"
+                    >
+                      Ver no Google Maps →
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             
-            <div className="text-center text-white/80">
+            <div className="text-center text-white/80 border-t border-white/20 pt-6">
               <p>&copy; 2024 BJJ Tasmania. Todos os direitos reservados.</p>
             </div>
           </div>
