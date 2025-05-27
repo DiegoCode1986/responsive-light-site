@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Menu, X, Play, ChevronRight, Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -171,40 +172,43 @@ const Index = () => {
         id="home" 
         className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/lovable-uploads/1e8516c1-f9f2-4e1f-844c-24fb53dad867.png')"
+          backgroundImage: "url('/lovable-uploads/1e8516c1-f9f2-4e1f-844c-24fb53dad867.png')",
+          backgroundSize: "cover",
+          "@media (max-width: 768px)": {
+            backgroundSize: "contain"
+          }
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
+          <div className="flex justify-center items-center min-h-[400px] lg:min-h-[500px]">
+            <div className="text-center">
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 BRAZILIAN<br />
                 JIU JITSU<br />
                 <span className="text-yellow-500">TASMANIA</span>
               </h1>
-              <p className="text-lg text-gray-200 mb-8 max-w-md mx-auto lg:mx-0">
+              <p className="text-lg text-gray-200 mb-8 max-w-md mx-auto">
                 Learn the art of Brazilian Jiu Jitsu with experienced instructors in a welcoming environment.
               </p>
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex justify-center">
                 <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
                   JOIN NOW <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="w-64 h-64 lg:w-80 lg:h-80 border-2 border-yellow-500 rounded-full flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/c7ae828f-680a-42b7-9d9d-4cf62682f517.png" 
-                    alt="BJJ Tasmania Logo"
-                    className="w-48 h-48 lg:w-64 lg:h-64 object-contain"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
+        
+        {/* Mobile responsive background adjustment */}
+        <style jsx>{`
+          @media (max-width: 768px) {
+            section {
+              background-size: cover !important;
+              background-position: center top !important;
+            }
+          }
+        `}</style>
       </section>
 
       {/* About Section */}
