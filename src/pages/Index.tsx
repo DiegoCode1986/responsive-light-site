@@ -121,7 +121,7 @@ const Index = () => {
             <div className="flex items-center space-x-2">
               <div className="w-12 h-12 flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/fd5b643e-1cca-432b-8a3b-cd08692058fa.png" 
+                  src="/lovable-uploads/c7ae828f-680a-42b7-9d9d-4cf62682f517.png" 
                   alt="BJJ Tasmania Logo"
                   className="w-full h-full object-contain"
                 />
@@ -194,11 +194,11 @@ const Index = () => {
             </div>
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-64 h-64 lg:w-80 lg:h-80 border-4 border-yellow-500 rounded-full flex items-center justify-center">
+                <div className="w-64 h-64 lg:w-80 lg:h-80 border-2 border-yellow-500 rounded-full flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/fd5b643e-1cca-432b-8a3b-cd08692058fa.png" 
+                    src="/lovable-uploads/c7ae828f-680a-42b7-9d9d-4cf62682f517.png" 
                     alt="BJJ Tasmania Logo"
-                    className="w-40 h-40 lg:w-56 lg:h-56 object-contain"
+                    className="w-48 h-48 lg:w-64 lg:h-64 object-contain"
                   />
                 </div>
               </div>
@@ -215,7 +215,7 @@ const Index = () => {
               <div className="w-32 h-32 bg-yellow-500 rounded-full flex items-center justify-center">
                 <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/fd5b643e-1cca-432b-8a3b-cd08692058fa.png" 
+                    src="/lovable-uploads/c7ae828f-680a-42b7-9d9d-4cf62682f517.png" 
                     alt="BJJ Tasmania Logo"
                     className="w-16 h-16 object-contain"
                   />
