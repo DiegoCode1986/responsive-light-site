@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import LocationMap from '@/components/LocationMap';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -169,7 +170,7 @@ const Index = () => {
       {/* Hero Section */}
       <section 
         id="home" 
-        className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat md:bg-cover"
+        className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat md:bg-contain lg:bg-cover"
         style={{
           backgroundImage: "url('/lovable-uploads/1e8516c1-f9f2-4e1f-844c-24fb53dad867.png')"
         }}
@@ -779,6 +780,9 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* WhatsApp Float Button */}
+      <WhatsAppFloat />
     </div>
   );
 };
