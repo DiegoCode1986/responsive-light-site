@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X, Play, ChevronRight, Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -170,13 +169,9 @@ const Index = () => {
       {/* Hero Section */}
       <section 
         id="home" 
-        className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
+        className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat md:bg-cover"
         style={{
-          backgroundImage: "url('/lovable-uploads/1e8516c1-f9f2-4e1f-844c-24fb53dad867.png')",
-          backgroundSize: "cover",
-          "@media (max-width: 768px)": {
-            backgroundSize: "contain"
-          }
+          backgroundImage: "url('/lovable-uploads/1e8516c1-f9f2-4e1f-844c-24fb53dad867.png')"
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
