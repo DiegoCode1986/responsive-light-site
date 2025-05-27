@@ -78,6 +78,39 @@ const Index = () => {
     }
   ];
 
+  const instructors = [
+    {
+      name: "Prof. Carlos Silva",
+      specialty: "Brazilian Jiu-Jitsu",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face",
+      experience: "Faixa preta 3º Dan com mais de 15 anos de experiência no BJJ. Campeão mundial pela IBJJF e especialista em técnicas de guarda. Formado pela academia Gracie Barra, dedica-se ao ensino há mais de 10 anos, desenvolvendo atletas de alto nível e promovendo os valores do Jiu-Jitsu."
+    },
+    {
+      name: "Prof. Ana Santos",
+      specialty: "Muay Thai",
+      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop&crop=face",
+      experience: "Campeã nacional de Muay Thai com 12 anos de carreira competitiva. Especialista em clinch e técnicas de joelho e cotovelo. Treinou na Tailândia por 3 anos, aperfeiçoando suas habilidades em camps tradicionais. Hoje dedica-se ao ensino, formando novos atletas e promovendo o condicionamento físico através desta arte marcial."
+    },
+    {
+      name: "Prof. Roberto Oliveira",
+      specialty: "Judo",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=400&fit=crop&crop=face",
+      experience: "Faixa preta 5º Dan de Judô, ex-atleta da seleção brasileira com participação em Pan-Americanos. Especialista em técnicas de projeção (nage-waza) e imobilização (katame-waza). Com mais de 20 anos dedicados ao ensino, formou dezenas de faixas pretas e atletas competidores, sempre enfatizando a disciplina e o respeito mútuo."
+    },
+    {
+      name: "Prof. Marina Costa",
+      specialty: "Karatê",
+      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=400&fit=crop&crop=face",
+      experience: "Faixa preta 4º Dan de Karatê Shotokan, campeã brasileira de kata e kumite. Especialista em técnicas tradicionais e aplicação em defesa pessoal. Estudou no Japão por 2 anos, aprofundando seus conhecimentos na filosofia e técnicas tradicionais. Dedica-se ao ensino infantil e adulto, promovendo disciplina, concentração e autocontrole."
+    },
+    {
+      name: "Prof. Lucas Ferreira",
+      specialty: "Boxe",
+      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&h=400&fit=crop&crop=face",
+      experience: "Ex-pugilista profissional com 8 anos de carreira no ringue. Especialista em técnicas de socos, movimentação e estratégia de combate. Treinou com grandes nomes do boxe nacional e internacional. Atualmente dedica-se ao ensino, focando no condicionamento físico, autodefesa e formação de novos atletas, sempre priorizando a técnica e a segurança."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -447,6 +480,42 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Instructors Section */}
+      <section id="instructors" className="py-20 bg-gray-800 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              NOSSOS <span className="text-yellow-500">PROFESSORES</span>
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Conheça nossa equipe de instrutores altamente qualificados, cada um especialista em sua modalidade, 
+              prontos para compartilhar conhecimento e experiência com você.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {instructors.map((instructor, index) => (
+              <div key={index} className="bg-gray-700 rounded-lg overflow-hidden hover:bg-gray-600 transition-colors">
+                <div className="h-64 overflow-hidden">
+                  <img 
+                    src={instructor.image}
+                    alt={instructor.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-yellow-500 mb-2">{instructor.name}</h3>
+                  <h4 className="text-lg font-semibold text-white mb-4">{instructor.specialty}</h4>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {instructor.experience}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* News Section */}
       <section id="news" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -596,7 +665,7 @@ const Index = () => {
                 <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2m-2-2v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                   </svg>
                 </div>
               </div>
