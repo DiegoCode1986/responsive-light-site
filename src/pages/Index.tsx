@@ -120,25 +120,25 @@ const Index = () => {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="w-12 h-12 flex items-center justify-center">
+              <div className="w-16 h-16 flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/c7ae828f-680a-42b7-9d9d-4cf62682f517.png" 
-                  alt="BJJ Tasmania Logo"
+                  alt=" Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-xl font-bold text-gray-800">BJJ TASMANIA</span>
+              <span className="text-xl font-bold text-gray-800">CT - ESPORTE VIDA</span>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               <a href="#home" className="text-gray-700 hover:text-yellow-500 transition-colors">HOME</a>
-              <a href="#about" className="text-gray-700 hover:text-yellow-500 transition-colors">ABOUT</a>
-              <a href="#classes" className="text-gray-700 hover:text-yellow-500 transition-colors">CLASSES</a>
-              <a href="#instructors" className="text-gray-700 hover:text-yellow-500 transition-colors">INSTRUCTORS</a>
-              <a href="#membership" className="text-gray-700 hover:text-yellow-500 transition-colors">MEMBERSHIP</a>
-              <a href="#news" className="text-gray-700 hover:text-yellow-500 transition-colors">NEWS</a>
-              <a href="#contact" className="text-gray-700 hover:text-yellow-500 transition-colors">CONTACT</a>
+              <a href="#about" className="text-gray-700 hover:text-yellow-500 transition-colors">SOBRE</a>
+              <a href="#classes" className="text-gray-700 hover:text-yellow-500 transition-colors">MODALIDADES</a>
+              <a href="#instructors" className="text-gray-700 hover:text-yellow-500 transition-colors">INSTRUTORES</a>
+              <a href="#membership" className="text-gray-700 hover:text-yellow-500 transition-colors">FOTOS</a>
+              <a href="#news" className="text-gray-700 hover:text-yellow-500 transition-colors">EVENTOS</a>
+              <a href="#contact" className="text-gray-700 hover:text-yellow-500 transition-colors">CONTATO</a>
             </div>
 
             {/* Mobile menu button */}
@@ -155,12 +155,12 @@ const Index = () => {
             <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t">
               <div className="px-4 py-2 space-y-1">
                 <a href="#home" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">HOME</a>
-                <a href="#about" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">ABOUT</a>
-                <a href="#classes" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">CLASSES</a>
-                <a href="#instructors" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">INSTRUCTORS</a>
-                <a href="#membership" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">MEMBERSHIP</a>
-                <a href="#news" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">NEWS</a>
-                <a href="#contact" className="block py-3 text-gray-700 hover:text-yellow-500">CONTACT</a>
+                <a href="#about" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">SOBRE</a>
+                <a href="#classes" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">MODALIDADES</a>
+                <a href="#instructors" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">INSTRUTORES</a>
+                <a href="#membership" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">FOTOS</a>
+                <a href="#news" className="block py-3 text-gray-700 hover:text-yellow-500 border-b border-gray-100">EVENTOS</a>
+                <a href="#contact" className="block py-3 text-gray-700 hover:text-yellow-500">CONTATO</a>
               </div>
             </div>
           )}
@@ -172,7 +172,7 @@ const Index = () => {
         id="home" 
         className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat md:bg-contain lg:bg-cover"
         style={{
-          backgroundImage: "url('/lovable-uploads/1e8516c1-f9f2-4e1f-844c-24fb53dad867.png')"
+          backgroundImage: "url('/lovable-uploads/judo1.jpg')"
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -180,16 +180,16 @@ const Index = () => {
           <div className="flex justify-center items-center min-h-[400px] lg:min-h-[500px]">
             <div className="text-center">
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-                BRAZILIAN<br />
-                JIU JITSU<br />
-                <span className="text-yellow-500">TASMANIA</span>
+               CAMINHO<br />
+                SUAVE<br />
+                <span className="text-yellow-500">ESPORTE VIDA</span>
               </h1>
               <p className="text-lg text-gray-200 mb-8 max-w-md mx-auto">
-                Learn the art of Brazilian Jiu Jitsu with experienced instructors in a welcoming environment.
+              Aprenda a arte do Jiu Jitsu,Judô,Muay Thay com instrutores experientes em um ambiente acolhedor.
               </p>
               <div className="flex justify-center">
-                <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
-                  JOIN NOW <ChevronRight className="ml-2 h-5 w-5" />
+                <Button className=" bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 text-lg">
+                <a href="#classes">Quero conhecer<ChevronRight className="ml-3 h-5 w-6" /></a>
                 </Button>
               </div>
             </div>
@@ -212,33 +212,37 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
-              <div className="w-32 h-32 bg-yellow-500 rounded-full flex items-center justify-center">
-                <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+             
+                <div className="w-55 h-55 bg-white rounded-full flex items-center justify-center">
                   <img 
                     src="/lovable-uploads/c7ae828f-680a-42b7-9d9d-4cf62682f517.png" 
                     alt="BJJ Tasmania Logo"
-                    className="w-16 h-16 object-contain"
+                    className="w-54 h-54 object-contain"
                   />
                 </div>
-              </div>
+              
             </div>
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
-                WELCOME TO<br />
-                <span className="text-yellow-500">BJJ TASMANIA</span>
+                SEJA MUITO BEM-VINDO AO<br />
+                <span className="text-yellow-500">CT-Esporte Vida</span>
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Brazilian Jiu Jitsu has been described as "the best martial art for self defense and self-discipline." 
-                Australia has also been regarded as one of the strongest BJJ countries in the world outside of Brazil.
+              As artes marciais servem para uma variedade de propósitos, incluindo defesa pessoal, saúde 
+              física e mental, desenvolvimento pessoal, socialização e lazer. Elas oferecem benefícios como 
+              melhora na flexibilidade, coordenação, respiração, postura, força, 
+              resistência, autocontrole e disciplina, além de fortalecer o caráter e a autoconfiança. 
               </p>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                Our academy offers world-class training with experienced instructors who are passionate about 
-                sharing their knowledge. Whether you're a beginner or advanced practitioner, we welcome everyone 
-                to join our supportive community and international brotherhood in BJJ and martial arts Brazilian Jiu Jitsu Tasmania.
+              <p className="text-gray-800 mb-8 leading-relaxed">
+              Prepare-se para elevar o seu treino! Na nossa academia, 
+              oferecemos treinamento de alto nível conduzido por instrutores
+               experientes e apaixonados por transmitir seus conhecimentos.
+
+              Não importa se você está apenas começando ou já é um praticante avançado,
+               convidamos a todos para fazer parte da nossa comunidade acolhedora e internacional.
+                Venha desenvolver suas habilidades em alguma arte marcial em um ambiente de apoio e camaradagem.
               </p>
-              <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3">
-                READ MORE
-              </Button>
+            
             </div>
           </div>
         </div>
@@ -573,7 +577,7 @@ const Index = () => {
                 
                 <div className="flex gap-4">
                   <img 
-                    src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=100&h=80&fit=crop" 
+                     src="/lovable-uploads/judoherick.jpg" 
                     alt="News"
                     className="w-20 h-16 object-cover rounded"
                   />
@@ -590,30 +594,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-16 bg-gray-800 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">
-              SUBSCRIBE TO<br />
-              <span className="text-yellow-500">OUR NEWSLETTER</span>
-            </h2>
-          </div>
-          
-          <div className="max-w-md mx-auto">
-            <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-yellow-500"
-              />
-              <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3">
-                SUBSCRIBE
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Footer */}
       <footer className="py-16 bg-gray-800 text-white">
@@ -716,7 +697,7 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Contact Information */}
+              {/* contato e informação*/}
               <div className="text-center md:text-left">
                 <h3 className="text-xl font-bold mb-4">Localização e Contato</h3>
                 <div className="space-y-3">
@@ -762,7 +743,14 @@ const Index = () => {
 
                   <div className="mt-4">
                     <a 
-                      href="https://www.google.com/maps/search/academia+esporte+vide+jardim+inga/@-16.1482418,-47.9472321,18z?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
+                      href="https://www.google.com/maps/place/Centro+de+Treinamento+Esporte+Vida+-
+                      +Jardim+Ing%C3%A1/@-16.1482418,-47.9472321,18z/data=!4m10!1m2!2m1!1sacademia+
+                      esporte+vide+jardim+inga!3m6!1s0x93599b0b952a92c3:0xc33d98cb7137398!8m2!3d-
+                      16.1482419!4d-47.9449789!15sCiFhY2FkZW1pYSBlc3BvcnRlIHZpZGUgamFyZGltIGluZ2FaIyIhY
+                      WNhZGVtaWEgZXNwb3J0ZSB2aWRlIGphcmRpbSBpbmdhkgENc3BvcnRzX3NjaG9vbJoBI0NoWkRTVWhOTU
+                      c5blMwVkpRMEZuU1VOU2NVeFBjV05SRUFFqgFmEAEqGSIVYWNhZGVtaWEgZXNwb3J0ZSB2aWRlKAwyIBA
+                      BIhyE8tayhwCFgVOs3sV-I2_7kX1TxCoRxdvHTaICMiUQAiIhYWNhZGVtaWEgZXNwb3J0ZSB2aWRlIGphc
+                      mRpbSBpbmdh4AEA-gEECAAQMA!16s%2Fg%2F11fl900fj1?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-yellow-500 hover:text-yellow-400 font-medium text-sm underline"
@@ -775,7 +763,7 @@ const Index = () => {
             </div>
             
             <div className="text-center text-white/80 border-t border-white/20 pt-6">
-              <p>&copy; 2024 BJJ Tasmania. Todos os direitos reservados.</p>
+              <p>&copy; 2025 CT- Esporte Vida. Todos os direitos reservados.</p>
             </div>
           </div>
         </div>
