@@ -55,15 +55,16 @@ const Index = () => {
       description: 'Sessões de treino livre disponíveis apenas para estudantes que estão treinando ativamente e precisam de tempo extra para praticar. Sparring supervisionado e desenvolvimento técnico.'
     }
   };
-
+  
+  {/** sessão  fotos da acemia -------------------------------------------- */}
   const academyImages = [
     {
-      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
-      alt: "BJJ Training Session"
+      src: "lovable-uploads/taekendo1.jpeg",
+      alt: "treino infantil de Taekendo"
     },
     {
-      src: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&h=600&fit=crop",
-      alt: "Academy Interior"
+      src: "lovable-uploads/medalha_mirin.png",
+      alt: "Nossos campeões da classe Mirim, 07 e 08 anos."
     },
     {
       src: "https://images.unsplash.com/photo-1544737151-6e4b9c2c2e5e?w=800&h=600&fit=crop",
@@ -81,15 +82,15 @@ const Index = () => {
 
   const instructors = [
     {
-      name: "Prof. Carlos Silva",
-      specialty: "Brazilian Jiu-Jitsu",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face",
+      name: "Prof. Leandro Costa",
+      specialty: "Judô",
+      image: "/lovable-uploads/prof-leandro.jpeg" ,
       experience: "Faixa preta 3º Dan com mais de 15 anos de experiência no BJJ. Campeão mundial pela IBJJF e especialista em técnicas de guarda. Formado pela academia Gracie Barra, dedica-se ao ensino há mais de 10 anos, desenvolvendo atletas de alto nível e promovendo os valores do Jiu-Jitsu."
     },
     {
       name: "Prof. Ana Santos",
       specialty: "Muay Thai",
-      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop&crop=face",
+      image: "/lovable-uploads/prof-victor2.jpeg" ,
       experience: "Campeã nacional de Muay Thai com 12 anos de carreira competitiva. Especialista em clinch e técnicas de joelho e cotovelo. Treinou na Tailândia por 3 anos, aperfeiçoando suas habilidades em camps tradicionais. Hoje dedica-se ao ensino, formando novos atletas e promovendo o condicionamento físico através desta arte marcial."
     },
     {
@@ -248,31 +249,34 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Classes Section */}
+      {/* MODALIDADES ----------------------------------------------------------- */}
+      
+      
       <section id="classes" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">CLASSES</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">MODALIDADES</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+         
             {/* Adult BJJ */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-200 relative">
+              <div className="h-68 bg-gray-200 relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" 
-                  alt="Adult BJJ"
+                  src="lovable-uploads\judo-infantil2.jpg" 
+                  alt="Judô Infantil"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">ADULTS BJJ</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Judô Infantil</h3>
                 <Button 
                   size="sm" 
                   className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
                   onClick={() => toggleClassInfo('adults-bjj')}
                 >
-                  VIEW MORE
+                 VER MAIS
                 </Button>
                 {expandedClass === 'adults-bjj' && (
                   <div className="mt-4 space-y-2 text-sm text-gray-600">
@@ -286,21 +290,21 @@ const Index = () => {
 
             {/* Juniors 10-16 */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-200 relative">
+              <div className="h-68 bg-gray-200 relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=400&h=300&fit=crop" 
+                 src="lovable-uploads\muay-thay.jpg" 
                   alt="Juniors BJJ"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">JUNIORS 10-16 YRS BJJ</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Muai-Thay</h3>
                 <Button 
                   size="sm" 
                   className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
                   onClick={() => toggleClassInfo('juniors-10-16')}
                 >
-                  VIEW MORE
+                  VER MAIS
                 </Button>
                 {expandedClass === 'juniors-10-16' && (
                   <div className="mt-4 space-y-2 text-sm text-gray-600">
@@ -314,21 +318,21 @@ const Index = () => {
 
             {/* Juniors 6-10 */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-200 relative">
+              <div className="h-68 bg-gray-200 relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" 
+                src="lovable-uploads\jiu-jitsu.jpg" 
                   alt="Kids BJJ"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">JUNIORS 6-10 YRS BJJ</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Jiu-Jitsu</h3>
                 <Button 
                   size="sm" 
                   className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
                   onClick={() => toggleClassInfo('juniors-6-10')}
                 >
-                  VIEW MORE
+                  VER MAIS
                 </Button>
                 {expandedClass === 'juniors-6-10' && (
                   <div className="mt-4 space-y-2 text-sm text-gray-600">
@@ -342,21 +346,21 @@ const Index = () => {
 
             {/* Ladies BJJ */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-200 relative">
+              <div className="h-68 bg-gray-200 relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" 
+                  src="lovable-uploads\taekendo_modalidades.jpg" 
                   alt="Ladies BJJ"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">LADIES BJJ</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">TAEKWONDO</h3>
                 <Button 
                   size="sm" 
                   className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
                   onClick={() => toggleClassInfo('ladies-bjj')}
                 >
-                  VIEW MORE
+                  VER MAIS
                 </Button>
                 {expandedClass === 'ladies-bjj' && (
                   <div className="mt-4 space-y-2 text-sm text-gray-600">
@@ -370,21 +374,21 @@ const Index = () => {
 
             {/* No-Gi Grappling */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-200 relative">
+              <div className="h-68 bg-gray-200 relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=400&h=300&fit=crop" 
+                   src="lovable-uploads\Hapkido.jpg" 
                   alt="No-Gi Grappling"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">NO-GI GRAPPLING BJJ</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Hapkido</h3>
                 <Button 
                   size="sm" 
                   className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
                   onClick={() => toggleClassInfo('no-gi')}
                 >
-                  VIEW MORE
+                  Ver Mais
                 </Button>
                 {expandedClass === 'no-gi' && (
                   <div className="mt-4 space-y-2 text-sm text-gray-600">
@@ -396,38 +400,12 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Open Mat */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gray-200 relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" 
-                  alt="Open Mat"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">OPEN MAT BJJ</h3>
-                <Button 
-                  size="sm" 
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
-                  onClick={() => toggleClassInfo('open-mat')}
-                >
-                  VIEW MORE
-                </Button>
-                {expandedClass === 'open-mat' && (
-                  <div className="mt-4 space-y-2 text-sm text-gray-600">
-                    <p><strong>Horários:</strong> {classDetails['open-mat'].schedule}</p>
-                    <p><strong>Idade:</strong> {classDetails['open-mat'].age}</p>
-                    <p className="mt-2">{classDetails['open-mat'].description}</p>
-                  </div>
-                )}
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>
-
-      {/* Membership Section with Carousel */}
+{/*__________________________________________________________________________________________________ */}
+      {/* fotos da academia  */}
       <section id="membership" className="py-20 bg-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -477,9 +455,7 @@ const Index = () => {
             <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
               OUR CLUB NEWS
             </Button>
-            <Button variant="outline" className="border-gray-400 text-white hover:bg-gray-700 px-8 py-3 text-lg">
-              ABOUT GRADING
-            </Button>
+            
           </div>
         </div>
       </section>
@@ -520,7 +496,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* News Section */}
+      {/* section das imagens de eventos ------------------------------------------------- */}
+     
       <section id="news" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
@@ -545,18 +522,18 @@ const Index = () => {
             </div>
             
             <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">RECENT NEWS & EVENTS</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-8">EVENTOS RECENTES</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <img 
-                    src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=100&h=80&fit=crop" 
+                    src="lovable-uploads\medalha_mirin.png" 
                     alt="News"
-                    className="w-20 h-16 object-cover rounded"
+                    className="w-20 h-20 object-cover rounded"
                   />
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">2016 BJJ ACADEMY OF SEMARANG</h3>
+                    <h3 className="font-semibold text-gray-800 mb-1">Campeonato de Judô 2023</h3>
                     <p className="text-sm text-gray-600">
-                      Keep up to date with all the latest news and events at Millennium and BJJ.
+                    Nossos campeões da classe Mirim, 07 e 08 anos.
                     </p>
                   </div>
                 </div>
@@ -763,14 +740,16 @@ const Index = () => {
             </div>
             
             <div className="text-center text-white/80 border-t border-white/20 pt-6">
-              <p>&copy; 2025 CT- Esporte Vida. Todos os direitos reservados.</p>
+              <p>&copy; 2025 CT Esporte Vida | Artes marciais - Jardim inga/Luziânia Todos os direitos reservados.</p>
             </div>
           </div>
         </div>
       </footer>
 
       {/* WhatsApp Float Button */}
-      <WhatsAppFloat />
+      <a href="https://api.whatsapp.com/send?phone=5561992163613&text=Olá! Gostaria de mais informações.">
+<WhatsAppFloat />
+</a>
     </div>
   );
 };
