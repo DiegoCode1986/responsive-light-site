@@ -193,7 +193,7 @@ const Index = () => {
       {/* Hero Section */}
       <section 
         id="home" 
-        className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
+        className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat md:bg-contain lg:bg-cover"
         style={{
           backgroundImage: "url('/lovable-uploads/judo1.jpg')"
         }}
@@ -218,6 +218,16 @@ const Index = () => {
             </div>
           </div>
         </div>
+        
+        {/* Mobile responsive background adjustment */}
+        <style jsx>{`
+          @media (max-width: 768px) {
+            section {
+              background-size: cover !important;
+              background-position: center top !important;
+            }
+          }
+        `}</style>
       </section>
 
       {/* About Section */}
