@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Play, ChevronRight, Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Menu, X, Play, Pause, Volume2, VolumeX, ChevronRight, Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Carousel,
@@ -14,6 +14,8 @@ import WhatsAppFloat from '@/components/WhatsAppFloat';
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedClass, setExpandedClass] = useState<string | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,6 +23,26 @@ const Index = () => {
 
   const toggleClassInfo = (className: string) => {
     setExpandedClass(expandedClass === className ? null : className);
+  };
+
+  const handlePlayPause = () => {
+    const video = document.getElementById('academy-video') as HTMLVideoElement;
+    if (video) {
+      if (isPlaying) {
+        video.pause();
+      } else {
+        video.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleMuteToggle = () => {
+    const video = document.getElementById('academy-video') as HTMLVideoElement;
+    if (video) {
+      video.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
   };
 
   const classDetails = {
@@ -503,21 +525,41 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-8">LATEST VIDEO</h2>
-              <div className="relative bg-gray-200 rounded-lg overflow-hidden h-64">
-                <img 
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" 
-                  alt="Latest Video"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full w-16 h-16">
-                    <Play className="w-6 h-6" />
-                  </Button>
+              <div className="relative bg-gray-900 rounded-lg overflow-hidden">
+                <video
+                  id="academy-video"
+                  className="w-full h-64 object-cover"
+                  poster="/lovable-uploads/d6b4e269-ffcf-4af9-ab48-63a20e7ede58.png"
+                  onPlay={() => setIsPlaying(true)}
+                  onPause={() => setIsPlaying(false)}
+                >
+                  <source src="/path-to-your-video.mp4" type="video/mp4" />
+                  Seu navegador não suporta o elemento de vídeo.
+                </video>
+                
+                {/* Custom Video Controls */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors">
+                  <div className="flex gap-4">
+                    <Button
+                      size="lg"
+                      onClick={handlePlayPause}
+                      className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full w-16 h-16 flex items-center justify-center"
+                    >
+                      {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
+                    </Button>
+                    
+                    <Button
+                      size="lg"
+                      onClick={handleMuteToggle}
+                      className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full w-16 h-16 flex items-center justify-center"
+                    >
+                      {isMuted ? <VolumeX className="w-6 h-6" /> : <Volume2 className="w-6 h-6" />}
+                    </Button>
+                  </div>
                 </div>
               </div>
               <p className="text-gray-600 mt-4">
-                Check out our latest video and see what "Portable sockets" by 
-                our visitors.
+                Confira nosso último vídeo e veja o que nossos visitantes estão falando sobre nossa academia.
               </p>
             </div>
             
