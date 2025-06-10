@@ -85,32 +85,29 @@ const Index = () => {
       name: "Prof. Leandro Costa",
       specialty: "Judô",
       image: "/lovable-uploads/prof-leandro.jpeg" ,
-      experience: "Faixa preta 3º Dan com mais de 15 anos de experiência no BJJ. Campeão mundial pela IBJJF e especialista em técnicas de guarda. Formado pela academia Gracie Barra, dedica-se ao ensino há mais de 10 anos, desenvolvendo atletas de alto nível e promovendo os valores do Jiu-Jitsu."
+      experience: "Judô é uma arte marcial praticada como esporte. Criada por Jigoro Kano em 1882, o judô é uma adaptação do jiu-jitsu, que tem por objetivo desenvolver técnicas de defesa pessoal, fortalecer o corpo, o físico e a mente de forma integrada. Foi considerado esporte oficial no Japão no final do século XIX."
+   
+   
     },
     {
-      name: "Prof. Ana Santos",
+      name: "Prof. Victor Ferrari",
+      specialty: "Taekwondo",
+      image: "/lovable-uploads/victor-ferrari.jpeg" ,
+      experience: "O taekwondo é uma arte marcial milenar coreana que combina técnicas de combate, autodefesa, esporte, exercício e filosofia. É conhecido por sua ênfase em chutes rápidos e potentes, bem como em técnicas de mão e defesa pessoal."
+    },
+    {
+      name: "Prof. Serginho",
       specialty: "Muay Thai",
-      image: "/lovable-uploads/prof-victor2.jpeg" ,
-      experience: "Campeã nacional de Muay Thai com 12 anos de carreira competitiva. Especialista em clinch e técnicas de joelho e cotovelo. Treinou na Tailândia por 3 anos, aperfeiçoando suas habilidades em camps tradicionais. Hoje dedica-se ao ensino, formando novos atletas e promovendo o condicionamento físico através desta arte marcial."
+      image:  "/lovable-uploads/serginho.jpeg" ,
+      experience: "O muay thai tem como premissa ser utilizado para autodefesa. Segundo sua história, foi criado pelos tailandeses para que agricultores se defendessem durante invasões no país. Sendo assim, ao invés de usarem espadas, investiam nos chutes e socos."
     },
     {
-      name: "Prof. Roberto Oliveira",
-      specialty: "Judo",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=400&fit=crop&crop=face",
-      experience: "Faixa preta 5º Dan de Judô, ex-atleta da seleção brasileira com participação em Pan-Americanos. Especialista em técnicas de projeção (nage-waza) e imobilização (katame-waza). Com mais de 20 anos dedicados ao ensino, formou dezenas de faixas pretas e atletas competidores, sempre enfatizando a disciplina e o respeito mútuo."
-    },
-    {
-      name: "Prof. Marina Costa",
-      specialty: "Karatê",
+      name: "Prof. Serginho",
+      specialty: "Muay Thai",
       image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=400&fit=crop&crop=face",
-      experience: "Faixa preta 4º Dan de Karatê Shotokan, campeã brasileira de kata e kumite. Especialista em técnicas tradicionais e aplicação em defesa pessoal. Estudou no Japão por 2 anos, aprofundando seus conhecimentos na filosofia e técnicas tradicionais. Dedica-se ao ensino infantil e adulto, promovendo disciplina, concentração e autocontrole."
+      experience: "O muay thai tem como premissa ser utilizado para autodefesa. Segundo sua história, foi criado pelos tailandeses para que agricultores se defendessem durante invasões no país. Sendo assim, ao invés de usarem espadas, investiam nos chutes e socos."
     },
-    {
-      name: "Prof. Lucas Ferreira",
-      specialty: "Boxe",
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&h=400&fit=crop&crop=face",
-      experience: "Ex-pugilista profissional com 8 anos de carreira no ringue. Especialista em técnicas de socos, movimentação e estratégia de combate. Treinou com grandes nomes do boxe nacional e internacional. Atualmente dedica-se ao ensino, focando no condicionamento físico, autodefesa e formação de novos atletas, sempre priorizando a técnica e a segurança."
-    }
+    
   ];
 
   return (
@@ -372,33 +369,7 @@ const Index = () => {
               </div>
             </div>
 
-            {/* No-Gi Grappling */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-68 bg-gray-200 relative">
-                <img 
-                   src="lovable-uploads\Hapkido.jpg" 
-                  alt="No-Gi Grappling"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Hapkido</h3>
-                <Button 
-                  size="sm" 
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
-                  onClick={() => toggleClassInfo('no-gi')}
-                >
-                  Ver Mais
-                </Button>
-                {expandedClass === 'no-gi' && (
-                  <div className="mt-4 space-y-2 text-sm text-gray-600">
-                    <p><strong>Horários:</strong> {classDetails['no-gi'].schedule}</p>
-                    <p><strong>Idade:</strong> {classDetails['no-gi'].age}</p>
-                    <p className="mt-2">{classDetails['no-gi'].description}</p>
-                  </div>
-                )}
-              </div>
-            </div>
+           
 
            
           </div>
@@ -460,7 +431,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Instructors Section */}
+      {/* nossos professores ----------------------------------------------------------- */}
+     
       <section id="instructors" className="py-20 bg-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -476,7 +448,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {instructors.map((instructor, index) => (
               <div key={index} className="bg-gray-700 rounded-lg overflow-hidden hover:bg-gray-600 transition-colors">
-                <div className="h-64 overflow-hidden">
+                <div className="h-54 overflow-hidden">
                   <img 
                     src={instructor.image}
                     alt={instructor.name}
@@ -502,22 +474,24 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">LATEST VIDEO</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-8">TREINOS</h2>
               <div className="relative bg-gray-200 rounded-lg overflow-hidden h-64">
-                <img 
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" 
-                  alt="Latest Video"
-                  className="w-full h-full object-cover"
-                />
+              <video
+            id="videoClara" src="lovable-uploads/video_clara.mp4"
+            className="w-full h-64 object-cover"
+            controls
+            autoPlay
+            muted preload="auto"
+            loop
+          >
+            Seu navegador não suporta o tag de vídeo.
+          </video>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full w-16 h-16">
-                    <Play className="w-6 h-6" />
-                  </Button>
+                  
                 </div>
               </div>
               <p className="text-gray-600 mt-4">
-                Check out our latest video and see what "Portable sockets" by 
-                our visitors.
+                treinos aos sabados para competidores.
               </p>
             </div>
             
