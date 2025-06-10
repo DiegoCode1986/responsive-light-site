@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Play, ChevronRight, Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Menu, X, Play, Pause, Volume2, VolumeX, ChevronRight, Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Carousel,
@@ -14,6 +14,8 @@ import WhatsAppFloat from '@/components/WhatsAppFloat';
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedClass, setExpandedClass] = useState<string | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,6 +23,26 @@ const Index = () => {
 
   const toggleClassInfo = (className: string) => {
     setExpandedClass(expandedClass === className ? null : className);
+  };
+
+  const handlePlayPause = () => {
+    const video = document.getElementById('academy-video') as HTMLVideoElement;
+    if (video) {
+      if (isPlaying) {
+        video.pause();
+      } else {
+        video.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleMuteToggle = () => {
+    const video = document.getElementById('academy-video') as HTMLVideoElement;
+    if (video) {
+      video.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
   };
 
   const classDetails = {
@@ -168,7 +190,7 @@ const Index = () => {
       {/* Hero Section */}
       <section 
         id="home" 
-        className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat md:bg-contain lg:bg-cover"
+        className="relative bg-gradient-to-r from-gray-900/80 to-gray-800/80 py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/lovable-uploads/judo1.jpg')"
         }}
@@ -193,16 +215,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-        
-        {/* Mobile responsive background adjustment */}
-        <style jsx>{`
-          @media (max-width: 768px) {
-            section {
-              background-size: cover !important;
-              background-position: center top !important;
-            }
-          }
-        `}</style>
       </section>
 
       {/* About Section */}
@@ -474,24 +486,22 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">TREINOS</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-8">LATEST VIDEO</h2>
               <div className="relative bg-gray-200 rounded-lg overflow-hidden h-64">
-              <video
-            id="videoClara" src="lovable-uploads/video_clara.mp4"
-            className="w-full h-64 object-cover"
-            controls
-            autoPlay
-            muted preload="auto"
-            loop
-          >
-            Seu navegador não suporta o tag de vídeo.
-          </video>
+                <img 
+                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" 
+                  alt="Latest Video"
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  
+                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full w-16 h-16">
+                    <Play className="w-6 h-6" />
+                  </Button>
                 </div>
               </div>
               <p className="text-gray-600 mt-4">
-                treinos aos sabados para competidores.
+                Check out our latest video and see what "Portable sockets" by 
+                our visitors.
               </p>
             </div>
             
