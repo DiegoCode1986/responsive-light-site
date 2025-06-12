@@ -47,9 +47,9 @@ const Index = () => {
 
   const classDetails = {
     'adults-bjj': {
-      schedule: 'Segunda, Quarta e Sexta - 19:00 às 20:30',
-      age: 'A partir de 16 anos',
-      description: 'Aprenda o Brazilian Jiu-Jitsu completo incluindo defesa pessoal eficaz, luta no solo, quedas e muito mais. Classes focadas em técnica, condicionamento físico e desenvolvimento pessoal.'
+      schedule: 'infantil:Segundas, Quartas e Sextas 09h, 17h e 18h.',
+      age: 'Judô adulto: A partir de 12 anos.',
+      description: ''
     },
     'juniors-10-16': {
       schedule: 'Terça e Quinta - 17:00 às 18:00',
@@ -74,7 +74,7 @@ const Index = () => {
     'open-mat': {
       schedule: 'Sábado - 14:00 às 16:00',
       age: 'Apenas para alunos ativos',
-      description: 'Sessões de treino livre disponíveis apenas para estudantes que estão treinando ativamente e precisam de tempo extra para praticar. Sparring supervisionado e desenvolvimento técnico.'
+      description: ''
     }
   };
   
@@ -124,10 +124,10 @@ const Index = () => {
       experience: "O muay thai tem como premissa ser utilizado para autodefesa. Segundo sua história, foi criado pelos tailandeses para que agricultores se defendessem durante invasões no país. Sendo assim, ao invés de usarem espadas, investiam nos chutes e socos."
     },
     {
-      name: "Prof. Serginho",
-      specialty: "Muay Thai",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=400&fit=crop&crop=face",
-      experience: "O muay thai tem como premissa ser utilizado para autodefesa. Segundo sua história, foi criado pelos tailandeses para que agricultores se defendessem durante invasões no país. Sendo assim, ao invés de usarem espadas, investiam nos chutes e socos."
+      name: "Prof. Anna",
+      specialty: "Jiu-Jitsu",
+      image:  "/lovable-uploads/anna-jiu.jpeg",
+      experience: "O jiu-jítsu é um esporte de combate e uma arte marcial que foi desenvolvida no Japão. Trata-se de uma luta em que o atleta tenta controlar o adversário com golpes, até conseguir imobilizá-lo, usando técnicas de torção ou estrangulamento, que finalizam o combate."
     },
     
   ];
@@ -562,7 +562,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              18 ANOS DE TRADIÇÃO!
+              12 ANOS DE TRADIÇÃO!
             </h2>
           </div>
           
@@ -578,8 +578,8 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Sobre a Academia</h3>
               <p className="text-white/90 text-sm leading-relaxed">
-                Academia BJJ Tasmania - Empresa voltada para a arte de fazer você evoluir, fundada em 2006, 
-                foi instalada em Tasmania com objetivo de ser uma academia voltada para a 
+                CT-Esporte Vida - Empresa voltada para a arte de fazer você evoluir, fundada em 2014, 
+                foi instalada no Jardim Ingá, com objetivo de ser uma academia voltada para a 
                 satisfação de seu usuário, tendo como foco principal você praticante.
               </p>
             </div>
@@ -595,9 +595,8 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Treinamentos Especializados</h3>
               <p className="text-white/90 text-sm leading-relaxed">
-                Todos os nossos treinamentos e serviços são realizados em consultórios 
-                altamente confortáveis, projetados de acordo com os melhores padrões de 
-                qualidade.
+                Todos os nossos treinamentos e serviços são realizados em tatame amplo e confortável, 
+                projetados de acordo com os melhores padrões de qualidade.
               </p>
             </div>
 
@@ -613,7 +612,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Atendimento de Qualidade</h3>
               <p className="text-white/90 text-sm leading-relaxed">
-                "Para nós, Academia BJJ Tasmania, a sua satisfação é de suma importância para o 
+                "Para nós, CT - Esporte Vida, a sua satisfação é de suma importância para o 
                 nosso desenvolvimento, criando uma rede de confiança e sustentabilidade." - 
                 Forte abraço!!!
               </p>
@@ -628,32 +627,18 @@ const Index = () => {
                 <h3 className="text-xl font-bold mb-4">Siga-nos nas Redes Sociais</h3>
                 <div className="flex justify-center md:justify-start gap-6">
                   <a 
-                    href="#" 
+                    href="http://facebook.com/judoesportevida" 
                     className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
                     aria-label="Facebook"
                   >
                     <Facebook className="w-6 h-6 text-white" />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.instagram.com/senseileandroesportevida?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                     className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
                     aria-label="Instagram"
                   >
                     <Instagram className="w-6 h-6 text-white" />
-                  </a>
-                  <a 
-                    href="#" 
-                    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
-                    aria-label="YouTube"
-                  >
-                    <Youtube className="w-6 h-6 text-white" />
-                  </a>
-                  <a 
-                    href="#" 
-                    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="w-6 h-6 text-white" />
                   </a>
                 </div>
               </div>
@@ -676,19 +661,11 @@ const Index = () => {
                       <Phone className="w-4 h-4 text-white" />
                     </div>
                     <div className="text-left">
-                      <p className="text-white/90 text-sm">(61) 99999-9999</p>
+                      <p className="text-white/90 text-sm">(61)992163613</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-center md:justify-start gap-3">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="text-left">
-                      <p className="text-white/90 text-sm">contato@bjjtasmania.com</p>
-                    </div>
-                  </div>
-
+                 
                   <div className="flex items-start justify-center md:justify-start gap-3">
                     <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
                       <Clock className="w-4 h-4 text-white" />
@@ -731,9 +708,9 @@ const Index = () => {
       </footer>
 
       {/* WhatsApp Float Button */}
-      <a href="https://api.whatsapp.com/send?phone=5561992163613&text=Olá! Gostaria de mais informações.">
-<WhatsAppFloat />
-</a>
+      <a href="https://api.whatsapp.com/send?phone=5561992163613&text=Olá! venho pelo site e gostaria de mais informações.">
+        <WhatsAppFloat />
+      </a>
     </div>
   );
 };
