@@ -486,69 +486,121 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">LATEST VIDEO</h2>
-              <div className="relative bg-gray-200 rounded-lg overflow-hidden h-64">
-                <img 
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" 
-                  alt="Latest Video"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full w-16 h-16">
-                    <Play className="w-6 h-6" />
-                  </Button>
+              <h2 className="text-3xl font-bold text-gray-800 mb-8">VÍDEO EM DESTAQUE</h2>
+              <div className="relative bg-gray-900 rounded-lg overflow-hidden">
+                <video
+                  id="academy-video"
+                  className="w-full h-64 object-cover"
+                  poster="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
+                  onLoadStart={() => console.log('Video loading started')}
+                  onCanPlay={() => console.log('Video can play')}
+                >
+                  <source src="/lovable-uploads/video_clara.mp4" type="video/mp4" />
+                  Seu navegador não suporta o elemento de vídeo.
+                </video>
+                
+                {/* Video Controls Overlay */}
+                <div className="absolute inset-0 bg-black/20 flex items-center justify-center group hover:bg-black/40 transition-all duration-300">
+                  <div className="flex items-center gap-4">
+                    {/* Play/Pause Button */}
+                    <Button 
+                      size="lg" 
+                      className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform"
+                      onClick={handlePlayPause}
+                    >
+                      {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-1" />}
+                    </Button>
+                    
+                    {/* Mute/Unmute Button */}
+                    <Button 
+                      size="lg" 
+                      className="bg-gray-700 hover:bg-gray-600 text-white rounded-full w-12 h-12 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all"
+                      onClick={handleMuteToggle}
+                    >
+                      {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                    </Button>
+                  </div>
+                </div>
+                
+                {/* Video Status Indicator */}
+                {isPlaying && (
+                  <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium animate-pulse">
+                    ▶ AO VIVO
+                  </div>
+                )}
+              </div>
+              
+              <div className="mt-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Treino de Judô Infantil</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Assista ao nosso vídeo em destaque mostrando o treino de judô infantil em nossa academia. 
+                  Veja como nossos pequenos atletas desenvolvem disciplina, respeito e técnicas fundamentais 
+                  desta arte marcial milenar.
+                </p>
+                <div className="flex items-center gap-4 mt-4 text-sm text-gray-500">
+                  <span>📅 Publicado recentemente</span>
+                  <span>👥 Judô Infantil</span>
+                  <span>⏱️ 2:30 min</span>
                 </div>
               </div>
-              <p className="text-gray-600 mt-4">
-                Check out our latest video and see what "Portable sockets" by 
-                our visitors.
-              </p>
             </div>
             
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-8">EVENTOS RECENTES</h2>
               <div className="space-y-6">
-                <div className="flex gap-4">
+                <div className="flex gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                   <img 
-                    src="lovable-uploads\medalha_mirin.png" 
-                    alt="News"
-                    className="w-20 h-20 object-cover rounded"
+                    src="lovable-uploads/medalha_mirin.png" 
+                    alt="Medalhas Mirim"
+                    className="w-20 h-20 object-cover rounded-lg shadow-sm"
                   />
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Campeonato de Judô 2023</h3>
-                    <p className="text-sm text-gray-600">
-                    Nossos campeões da classe Mirim, 07 e 08 anos.
+                    <h3 className="font-semibold text-gray-800 mb-2">🏆 Campeonato de Judô 2024</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      Nossos campeões da classe Mirim, 07 e 08 anos, conquistaram medalhas no 
+                      campeonato regional. Parabéns aos pequenos guerreiros!
                     </p>
+                    <span className="text-xs text-yellow-600 font-medium">Dezembro 2024</span>
                   </div>
                 </div>
                 
-                <div className="flex gap-4">
+                <div className="flex gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                   <img 
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=100&h=80&fit=crop" 
-                    alt="News"
-                    className="w-20 h-16 object-cover rounded"
+                    src="/lovable-uploads/taekendo1.jpeg" 
+                    alt="Treino Taekwondo"
+                    className="w-20 h-20 object-cover rounded-lg shadow-sm"
                   />
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">A GREAT BBJJ GUILD & CLUB</h3>
-                    <p className="text-sm text-gray-600">
-                      A great sport played around the world and available to all.
+                    <h3 className="font-semibold text-gray-800 mb-2">🥋 Exibição de Taekwondo</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      Demonstração técnica de Taekwondo com nossos alunos mais avançados, 
+                      mostrando a beleza e precisão desta arte marcial coreana.
                     </p>
+                    <span className="text-xs text-yellow-600 font-medium">Novembro 2024</span>
                   </div>
                 </div>
                 
-                <div className="flex gap-4">
+                <div className="flex gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                   <img 
                      src="/lovable-uploads/judoherick.jpg" 
-                    alt="News"
-                    className="w-20 h-16 object-cover rounded"
+                    alt="Treino Judô"
+                    className="w-20 h-20 object-cover rounded-lg shadow-sm"
                   />
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">OPEN SESSON THIS FINALS - IN QC GYMNASIUM</h3>
-                    <p className="text-sm text-gray-600">
-                      Open academy and session during the season brings the club.
+                    <h3 className="font-semibold text-gray-800 mb-2">🥋 Sessão Aberta de Judô</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      Aula aberta de judô durante as finais do campeonato estadual. 
+                      Uma oportunidade única para conhecer nossa metodologia de ensino.
                     </p>
+                    <span className="text-xs text-yellow-600 font-medium">Outubro 2024</span>
                   </div>
                 </div>
+              </div>
+              
+              <div className="mt-8 text-center">
+                <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3">
+                  Ver Todos os Eventos
+                </Button>
               </div>
             </div>
           </div>
