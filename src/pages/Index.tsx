@@ -1,15 +1,9 @@
 import { useState } from 'react';
 import { Menu, X, Play, Pause, Volume2, VolumeX, ChevronRight, Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import LocationMap from '@/components/LocationMap';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import PhotoCarousel from '@/components/PhotoCarousel';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,27 +72,43 @@ const Index = () => {
     }
   };
   
-  {/** sessão  fotos da acemia -------------------------------------------- */}
-  const academyImages = [
+  // Academy photos with enhanced data structure
+  const academyPhotos = [
     {
       src: "lovable-uploads/taekendo1.jpeg",
-      alt: "treino infantil de Taekendo"
+      alt: "Treino Infantil de Taekwondo",
+      category: "Taekwondo",
+      likes: 15
     },
     {
       src: "lovable-uploads/medalha_mirin.png",
-      alt: "Nossos campeões da classe Mirim, 07 e 08 anos."
+      alt: "Nossos Campeões da Classe Mirim",
+      category: "Competições",
+      likes: 23
     },
     {
-      src: "https://images.unsplash.com/photo-1544737151-6e4b9c2c2e5e?w=800&h=600&fit=crop",
-      alt: "BJJ Techniques"
+      src: "/lovable-uploads/judoherick.jpg",
+      alt: "Sessão de Treino de Judô",
+      category: "Judô",
+      likes: 18
     },
     {
-      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
-      alt: "Students Training"
+      src: "/lovable-uploads/judo-infantil2.jpg",
+      alt: "Judô Infantil em Ação",
+      category: "Judô Infantil",
+      likes: 12
     },
     {
-      src: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&h=600&fit=crop",
-      alt: "Competition Training"
+      src: "/lovable-uploads/muay-thay.jpg",
+      alt: "Treino de Muay Thai",
+      category: "Muay Thai",
+      likes: 20
+    },
+    {
+      src: "/lovable-uploads/jiu-jitsu.jpg",
+      alt: "Técnicas de Jiu-Jitsu",
+      category: "Jiu-Jitsu",
+      likes: 16
     }
   ];
 
@@ -387,56 +397,29 @@ const Index = () => {
           </div>
         </div>
       </section>
-{/*__________________________________________________________________________________________________ */}
-      {/* fotos da academia  */}
+
+      {/* Updated Photos Section with Modern Carousel */}
       <section id="membership" className="py-20 bg-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              BJJ CLUB<br />
-              <span className="text-yellow-500">RANKINGS</span>
+              GALERIA<br />
+              <span className="text-yellow-500">FOTOS DA ACADEMIA</span>
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-              Learn about our grading system, which denotes proficiency and skill level, and gives insight into 
-              an opponent's skill level in BJJ and we will break down exactly how our 
-              ranking system and training works.
+              Confira nossos momentos especiais, treinos intensos e conquistas dos nossos alunos. 
+              Uma coleção visual da nossa jornada no mundo das artes marciais.
             </p>
           </div>
 
-          {/* Academy Photos Carousel */}
+          {/* Modern Photo Carousel */}
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-center mb-8 text-yellow-500">FOTOS DA ACADEMIA</h3>
-            <div className="max-w-4xl mx-auto">
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {academyImages.map((image, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                      <div className="p-2">
-                        <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                          <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-                            <div className="absolute bottom-4 left-4 text-white">
-                              <p className="text-sm font-medium">{image.alt}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="left-4" />
-                <CarouselNext className="right-4" />
-              </Carousel>
-            </div>
+            <PhotoCarousel photos={academyPhotos} />
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
-              OUR CLUB NEWS
+              Ver Todas as Fotos
             </Button>
             
           </div>
