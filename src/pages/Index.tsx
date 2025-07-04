@@ -119,7 +119,6 @@ const Index = () => {
       image: "/lovable-uploads/prof-leandro.jpeg" ,
       experience: "Judô é uma arte marcial praticada como esporte. Criada por Jigoro Kano em 1882, o judô é uma adaptação do jiu-jitsu, que tem por objetivo desenvolver técnicas de defesa pessoal, fortalecer o corpo, o físico e a mente de forma integrada. Foi considerado esporte oficial no Japão no final do século XIX."
    
-   
     },
     {
       name: "Prof. Victor Ferrari",
@@ -473,7 +472,7 @@ const Index = () => {
               <div className="relative bg-gray-900 rounded-lg overflow-hidden">
                 <video
                   id="academy-video"
-                  className="w-full h-64 object-cover"
+                  className="w-full h-80 object-cover"
                   poster="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
                   onLoadStart={() => console.log('Video loading started')}
                   onCanPlay={() => console.log('Video can play')}
@@ -535,9 +534,9 @@ const Index = () => {
                   <img 
                     src="lovable-uploads/medalha_mirin.png" 
                     alt="Medalhas Mirim"
-                    className="w-20 h-20 object-cover rounded-lg shadow-sm"
+                    className="w-28 h-28 object-cover rounded-lg shadow-sm flex-shrink-0"
                   />
-                  <div>
+                  <div className="flex-1">
                     <h3 className="font-semibold text-gray-800 mb-2">🏆 Campeonato de Judô 2024</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
                       Nossos campeões da classe Mirim, 07 e 08 anos, conquistaram medalhas no 
@@ -551,9 +550,9 @@ const Index = () => {
                   <img 
                     src="/lovable-uploads/taekendo1.jpeg" 
                     alt="Treino Taekwondo"
-                    className="w-20 h-20 object-cover rounded-lg shadow-sm"
+                    className="w-28 h-28 object-cover rounded-lg shadow-sm flex-shrink-0"
                   />
-                  <div>
+                  <div className="flex-1">
                     <h3 className="font-semibold text-gray-800 mb-2">🥋 Exibição de Taekwondo</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
                       Demonstração técnica de Taekwondo com nossos alunos mais avançados, 
@@ -567,9 +566,9 @@ const Index = () => {
                   <img 
                      src="/lovable-uploads/judoherick.jpg" 
                     alt="Treino Judô"
-                    className="w-20 h-20 object-cover rounded-lg shadow-sm"
+                    className="w-28 h-28 object-cover rounded-lg shadow-sm flex-shrink-0"
                   />
-                  <div>
+                  <div className="flex-1">
                     <h3 className="font-semibold text-gray-800 mb-2">🥋 Sessão Aberta de Judô</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
                       Aula aberta de judô durante as finais do campeonato estadual. 
@@ -589,8 +588,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      
 
       {/* Footer */}
       <footer className="py-16 bg-gray-800 text-white">
