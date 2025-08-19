@@ -39,73 +39,85 @@ const Index = () => {
     }
   };
 
-  const classDetails = {
-    'adults-bjj': {
-      schedule: 'infantil:Segundas, Quartas e Sextas 09h, 17h e 18h.',
-      age: 'Judô adulto: A partir de 12 anos.',
-      description: ''
+  const modalities = [
+    {
+      name: 'JUDÔ INFANTIL',
+      days: 'Seg - Qua - Sex',
+      time: '9h - 17h - 18h',
     },
-    'juniors-10-16': {
-      schedule: 'Terça e Quinta - 17:00 às 18:00',
-      age: '10 a 16 anos',
-      description: 'Esta classe tem como objetivo incutir confiança, fitness e defesa pessoal, desenvolvendo forte disciplina e respeito. Foco em fundamentos e desenvolvimento do caráter.'
+    {
+      name: 'JUDÔ ADULTO',
+      days: 'Seg - Qua - Sex',
+      time: '10h - 19h',
     },
-    'juniors-6-10': {
-      schedule: 'Terça e Quinta - 16:00 às 17:00',
-      age: '6 a 10 anos',
-      description: 'Esta classe consiste em jogos divertidos que ajudam a construir força central e aprender um esporte que podem continuar para a vida. Ambiente lúdico e educativo.'
+    {
+      name: 'JIU-JITSU',
+      days: 'Ter - Qui',
+      time: '18h',
     },
-    'ladies-bjj': {
-      schedule: 'Sábado - 10:00 às 11:30',
-      age: 'A partir de 16 anos',
-      description: 'Para mulheres que querem entrar no BJJ por diversão, fitness ou autodefesa, esta classe irá introduzir as mulheres aos fundamentos básicos em um ambiente acolhedor e encorajador.'
+    {
+      name: 'MUAY THAI',
+      days: 'Ter - Qui',
+      time: '20h',
     },
-    'no-gi': {
-      schedule: 'Domingo - 15:00 às 16:30',
-      age: 'A partir de 14 anos',
-      description: 'No-Gi BJJ é ótimo e pode ser considerado como uma combinação de submission wrestling e técnicas de BJJ. Foco em agilidade, velocidade e transições dinâmicas.'
+    {
+      name: 'TAEKWONDO',
+      days: 'Ter - Qui - Sab',
+      time: '19h - Sab(10h)',
     },
-    'open-mat': {
-      schedule: 'Sábado - 14:00 às 16:00',
-      age: 'Apenas para alunos ativos',
-      description: ''
-    }
-  };
+    {
+      name: 'HAPKIDO',
+      days: 'Ter - Qui',
+      time: '21h',
+    },
+  ];
   
-  // Academy photos with enhanced data structure
+  // FOTOS DA ACADEMIA ----------------------------------------------
   const academyPhotos = [
     {
-      src: "lovable-uploads/taekendo1.jpeg",
+      src: "lovable-uploads/place1.jpeg",
       alt: "Treino Infantil de Taekwondo",
       category: "Taekwondo",
-      likes: 15
+      
     },
     {
-      src: "lovable-uploads/medalha_mirin.png",
+      src: "lovable-uploads/taekwondo1.jpg",
+      alt: "Treino Infantil de Taekwondo",
+      category: "Taekwondo",
+      
+    },
+    {
+      src: "lovable-uploads/place2.jpeg",
       alt: "Nossos Campeões da Classe Mirim",
       category: "Competições",
-      likes: 23
+      
     },
     {
-      src: "/lovable-uploads/judoherick.jpg",
+      src: "/lovable-uploads/place3.jpeg",
       alt: "Sessão de Treino de Judô",
       category: "Judô",
-      likes: 18
+      
     },
     {
-      src: "/lovable-uploads/judo-infantil2.jpg",
+      src: "/lovable-uploads/place4.jpeg",
       alt: "Judô Infantil em Ação",
       category: "Judô Infantil",
-      likes: 12
+     
     },
     {
-      src: "/lovable-uploads/muay-thay.jpg",
+      src: "/lovable-uploads/alunos1.jpeg",
       alt: "Treino de Muay Thai",
       category: "Muay Thai",
       likes: 20
     },
     {
-      src: "/lovable-uploads/jiu-jitsu.jpg",
+      src: "/lovable-uploads/alunos2.jpeg",
+      alt: "Técnicas de Jiu-Jitsu",
+      category: "Jiu-Jitsu",
+      likes: 16
+    },
+    {
+      src: "/lovable-uploads/alunos3.jpeg",
       alt: "Técnicas de Jiu-Jitsu",
       category: "Jiu-Jitsu",
       likes: 16
@@ -116,26 +128,26 @@ const Index = () => {
     {
       name: "Prof. Leandro Costa",
       specialty: "Judô",
-      image: "/lovable-uploads/prof-leandro.jpeg" ,
+      image: "/lovable-uploads/prof_leandro_judo.jpeg" ,
       experience: "Judô é uma arte marcial praticada como esporte. Criada por Jigoro Kano em 1882, o judô é uma adaptação do jiu-jitsu, que tem por objetivo desenvolver técnicas de defesa pessoal, fortalecer o corpo, o físico e a mente de forma integrada. Foi considerado esporte oficial no Japão no final do século XIX."
    
     },
     {
       name: "Prof. Victor Ferrari",
       specialty: "Taekwondo",
-      image: "/lovable-uploads/victor-ferrari.jpeg" ,
+      image: "/lovable-uploads/prof_victor_tae.jpeg" ,
       experience: "O taekwondo é uma arte marcial milenar coreana que combina técnicas de combate, autodefesa, esporte, exercício e filosofia. É conhecido por sua ênfase em chutes rápidos e potentes, bem como em técnicas de mão e defesa pessoal."
     },
     {
       name: "Prof. Serginho",
       specialty: "Muay Thai",
-      image:  "/lovable-uploads/serginho.jpeg" ,
+      image:  "/lovable-uploads/prof_serginho_muay.jpeg" ,
       experience: "O muay thai tem como premissa ser utilizado para autodefesa. Segundo sua história, foi criado pelos tailandeses para que agricultores se defendessem durante invasões no país. Sendo assim, ao invés de usarem espadas, investiam nos chutes e socos."
     },
     {
       name: "Prof. Anna",
       specialty: "Jiu-Jitsu",
-      image:  "/lovable-uploads/anna-jiu.jpeg",
+      image:  "/lovable-uploads/prof_ana_jiu.jpeg",
       experience: "O jiu-jítsu é um esporte de combate e uma arte marcial que foi desenvolvida no Japão. Trata-se de uma luta em que o atleta tenta controlar o adversário com golpes, até conseguir imobilizá-lo, usando técnicas de torção ou estrangulamento, que finalizam o combate."
     },
     
@@ -267,132 +279,33 @@ const Index = () => {
         </div>
       </section>
 
-      {/* MODALIDADES ----------------------------------------------------------- */}
-      
-      
+      {/* MODALIDADES */}
       <section id="classes" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">MODALIDADES</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">GRADE DE TREINOS</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Confira nossos horários e encontre a turma perfeita para você. Oferecemos turmas para todas as idades e níveis.
+            </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-         
-            {/* Adult BJJ */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-68 bg-gray-200 relative">
-                <img 
-                  src="lovable-uploads\judo-infantil2.jpg" 
-                  alt="Judô Infantil"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Judô Infantil</h3>
-                <Button 
-                  size="sm" 
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
-                  onClick={() => toggleClassInfo('adults-bjj')}
-                >
-                 VER MAIS
-                </Button>
-                {expandedClass === 'adults-bjj' && (
-                  <div className="mt-4 space-y-2 text-sm text-gray-600">
-                    <p><strong>Horários:</strong> {classDetails['adults-bjj'].schedule}</p>
-                    <p><strong>Idade:</strong> {classDetails['adults-bjj'].age}</p>
-                    <p className="mt-2">{classDetails['adults-bjj'].description}</p>
-                  </div>
-                )}
-              </div>
-            </div>
 
-            {/* Juniors 10-16 */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-68 bg-gray-200 relative">
-                <img 
-                 src="lovable-uploads\muay-thay.jpg" 
-                  alt="Juniors BJJ"
-                  className="w-full h-full object-cover"
-                />
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {modalities.map((modality) => (
+              <div key={modality.name} className="bg-yellow-400 rounded-lg p-6 text-center shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-800 uppercase tracking-wider">{modality.name}</h3>
+                <p className="text-gray-700 text-lg my-2">{modality.days}</p>
+                <div className="grid-cols-2 bg-gray-800 text-white rounded-md px-4 py-2 inline-flex items-center gap-2">
+                  <Clock size={20} />
+                  <span className="text-xl font-semibold tracking-wide">{modality.time}</span>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Muai-Thay</h3>
-                <Button 
-                  size="sm" 
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
-                  onClick={() => toggleClassInfo('juniors-10-16')}
-                >
-                  VER MAIS
-                </Button>
-                {expandedClass === 'juniors-10-16' && (
-                  <div className="mt-4 space-y-2 text-sm text-gray-600">
-                    <p><strong>Horários:</strong> {classDetails['juniors-10-16'].schedule}</p>
-                    <p><strong>Idade:</strong> {classDetails['juniors-10-16'].age}</p>
-                    <p className="mt-2">{classDetails['juniors-10-16'].description}</p>
-                  </div>
-                )}
-              </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Juniors 6-10 */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-68 bg-gray-200 relative">
-                <img 
-                src="lovable-uploads\jiu-jitsu.jpg" 
-                  alt="Kids BJJ"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Jiu-Jitsu</h3>
-                <Button 
-                  size="sm" 
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
-                  onClick={() => toggleClassInfo('juniors-6-10')}
-                >
-                  VER MAIS
-                </Button>
-                {expandedClass === 'juniors-6-10' && (
-                  <div className="mt-4 space-y-2 text-sm text-gray-600">
-                    <p><strong>Horários:</strong> {classDetails['juniors-6-10'].schedule}</p>
-                    <p><strong>Idade:</strong> {classDetails['juniors-6-10'].age}</p>
-                    <p className="mt-2">{classDetails['juniors-6-10'].description}</p>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Ladies BJJ */}
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-68 bg-gray-200 relative">
-                <img 
-                  src="lovable-uploads\taekendo_modalidades.jpg" 
-                  alt="Ladies BJJ"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">TAEKWONDO</h3>
-                <Button 
-                  size="sm" 
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white mb-4"
-                  onClick={() => toggleClassInfo('ladies-bjj')}
-                >
-                  VER MAIS
-                </Button>
-                {expandedClass === 'ladies-bjj' && (
-                  <div className="mt-4 space-y-2 text-sm text-gray-600">
-                    <p><strong>Horários:</strong> {classDetails['ladies-bjj'].schedule}</p>
-                    <p><strong>Idade:</strong> {classDetails['ladies-bjj'].age}</p>
-                    <p className="mt-2">{classDetails['ladies-bjj'].description}</p>
-                  </div>
-                )}
-              </div>
-            </div>
-
-           
-
-           
+          <div className="text-center mt-12">
+            <p className="text-lg font-semibold bg-yellow-400 text-gray-800 px-6 py-3 rounded-full inline-block shadow-lg">
+              AGENDE SUA AULA EXPERIMENTAL GRÁTIS. EM QUALQUER HORÁRIO!
+            </p>
           </div>
         </div>
       </section>
@@ -416,7 +329,7 @@ const Index = () => {
             <PhotoCarousel photos={academyPhotos} />
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
               Ver Todas as Fotos
             </Button>
@@ -469,13 +382,15 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-8">VÍDEO EM DESTAQUE</h2>
-              <div className="relative bg-gray-900 rounded-lg overflow-hidden">
+              <div className="relative bg-gray-900 rounded-lg overflow-hidden max-w-sm mx-auto aspect-[9/16]">
                 <video
                   id="academy-video"
-                  className="w-full h-80 object-cover"
+                  className="w-full h-full object-cover"
                   poster="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
                   onLoadStart={() => console.log('Video loading started')}
                   onCanPlay={() => console.log('Video can play')}
+                  playsInline
+                  loop
                 >
                   <source src="/lovable-uploads/video_clara.mp4" type="video/mp4" />
                   Seu navegador não suporta o elemento de vídeo.
@@ -487,7 +402,7 @@ const Index = () => {
                     {/* Play/Pause Button */}
                     <Button 
                       size="lg" 
-                      className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-full w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform"
+                    
                       onClick={handlePlayPause}
                     >
                       {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-1" />}
@@ -496,7 +411,7 @@ const Index = () => {
                     {/* Mute/Unmute Button */}
                     <Button 
                       size="lg" 
-                      className="bg-gray-700 hover:bg-gray-600 text-white rounded-full w-12 h-12 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all"
+                     
                       onClick={handleMuteToggle}
                     >
                       {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
@@ -504,7 +419,7 @@ const Index = () => {
                   </div>
                 </div>
                 
-                {/* Video Status Indicator */}
+                {/* Video Status Indicator ----------------------------------- */}
                 {isPlaying && (
                   <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium animate-pulse">
                     ▶ AO VIVO
@@ -548,9 +463,9 @@ const Index = () => {
                 
                 <div className="flex gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                   <img 
-                    src="/lovable-uploads/taekendo1.jpeg" 
+                    src="/lovable-uploads/herico.jpeg" 
                     alt="Treino Taekwondo"
-                    className="w-28 h-28 object-cover rounded-lg shadow-sm flex-shrink-0"
+                    className="w-32 h-32 object-cover rounded-lg shadow-sm flex-shrink-0"
                   />
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-800 mb-2">🥋 Exibição de Taekwondo</h3>
